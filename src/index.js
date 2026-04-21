@@ -38,7 +38,7 @@ class App {
 	navigateTo(page) {
 		document.querySelector('#nav').addEventListener('click', (e) => {
 			const navLink = e.target.getAttribute('id');
-			page(navLink);
+			if (navLink !== 'nav') page(navLink);
 		});
 	}
 }
