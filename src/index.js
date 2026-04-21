@@ -32,8 +32,6 @@ class App {
 			return;
 		}
 
-		this.contentContainer.innerHTML = '';
-
 		const targetId = button.getAttribute('id');
 
 		this.navigateTo(targetId);
@@ -55,9 +53,7 @@ class App {
 }
 
 class Home {
-	constructor() {
-		this.render();
-	}
+	constructor() {}
 
 	render() {
 		return `<h1>Home</h1>`;
@@ -65,9 +61,7 @@ class Home {
 }
 
 class Menu {
-	constructor() {
-		this.render();
-	}
+	constructor() {}
 
 	render() {
 		return `<h1>Menu</h1>`;
@@ -75,9 +69,7 @@ class Menu {
 }
 
 class About {
-	constructor() {
-		this.render();
-	}
+	constructor() {}
 
 	render() {
 		return `<h1>About</h1>`;
