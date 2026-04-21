@@ -12,34 +12,45 @@ class App {
 	}
 
 	init() {
-		this.contentContainer.innerHTML = this.homePage.render();
+		// set intial page to home
+		this.navigateTo('home');
 
-		this.onNavClick();
+		// listen to navigation event
+		this.setupNavigation();
 	}
 
-	onNavClick(page) {
-		this.navigateTo((page) => {
-			this.contentContainer.innerHTML = '';
-
-			if (page === 'home') {
-				this.contentContainer.innerHTML = this.homePage.render();
-			}
-
-			if (page === 'menu') {
-				this.contentContainer.innerHTML = this.menuPage.render();
-			}
-
-			if (page === 'about') {
-				this.contentContainer.innerHTML = this.aboutPage.render();
-			}
+	setupNavigation() {
+		document.querySelector('#nav').addEventListener('click', (e) => {
+			this.onNavigationClick(e);
 		});
+	}
+
+	onNavigationClick(e) {
+		const button = e.target.closest('button');
+
+		if (!button) {
+			return;
+		}
+
+		this.contentContainer.innerHTML = '';
+
+		const targetId = button.getAttribute('id');
+
+		this.navigateTo(targetId);
 	}
 
 	navigateTo(page) {
-		document.querySelector('#nav').addEventListener('click', (e) => {
-			const navLink = e.target.getAttribute('id');
-			if (navLink !== 'nav') page(navLink);
-		});
+		if (page === 'home') {
+			this.contentContainer.innerHTML = this.homePage.render();
+		}
+
+		if (page === 'menu') {
+			this.contentContainer.innerHTML = this.menuPage.render();
+		}
+
+		if (page === 'about') {
+			this.contentContainer.innerHTML = this.aboutPage.render();
+		}
 	}
 }
 
