@@ -1,4 +1,7 @@
 import './style.css';
+import { Home } from './pages/Home';
+import { Menu } from './pages/Menu';
+import { About } from './pages/About';
 
 class App {
 	constructor() {
@@ -49,30 +52,6 @@ class App {
 		if (page === 'about') {
 			this.contentContainer.innerHTML = this.aboutPage.render();
 		}
-	}
-}
-
-class Home {
-	constructor() {}
-
-	render() {
-		return `<h1>Home</h1>`;
-	}
-}
-
-class Menu {
-	constructor() {}
-
-	render() {
-		return `<h1>Menu</h1>`;
-	}
-}
-
-class About {
-	constructor() {}
-
-	render() {
-		return `<h1>About</h1>`;
 	}
 }
 
