@@ -15,8 +15,8 @@ export class About {
 			},
 			contacts: {
 				phone: '+62 822 0000 1111',
-				email: 'food@restaurant.com',
-				socials: '@FoodRestaurant',
+				email: 'welcomebumbu@food.com',
+				socials: '@welcomebumbu',
 			},
 		};
 	}
