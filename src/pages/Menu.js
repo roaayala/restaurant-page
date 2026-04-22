@@ -1,7 +1,11 @@
+import image from '../images/menu-image.jpg';
+
 export class Menu {
 	constructor() {
 		this.content = {
-			image: '',
+			image: image,
+			imageSource:
+				'https://www.pexels.com/photo/delicious-rendang-beef-plate-with-sides-37081040/',
 			headline: 'Taste The Archipelago',
 			menus: [
 				{
@@ -32,6 +36,7 @@ export class Menu {
 
 	render() {
 		return `<div>
+		<img src='${this.content.image}' >
 		<h1>${this.content.headline}</h1>
 	${this.content.menus.map((menu) => {
 		return `<div>
