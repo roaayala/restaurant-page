@@ -1,2 +1,7 @@
 @import url('./styles/reset.css');
 @import url('./styles/base.css');
+
+.header,
+.container {
+	padding: 0 1rem;
+}

@@ -14,8 +14,12 @@ export class Home {
 	render() {
 		return `<div>
 		<img src='${this.content.image}' >
+
+		<div class='container'>
 		<h1>${this.content.headline}</h1>
 		<p>${this.content.body}</p>
+		</div>
+
 		</div>`;
 	}
 }

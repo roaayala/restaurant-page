@@ -37,13 +37,19 @@ export class Menu {
 	render() {
 		return `<div>
 		<img src='${this.content.image}' >
+		
+		<div class='container'>
 		<h1>${this.content.headline}</h1>
-	${this.content.menus.map((menu) => {
-		return `<div>
+		${this.content.menus
+			.map((menu) => {
+				return `<div>
 		<h2>${menu.name} (Rp. ${menu.price})</h2>
 		<p>${menu.description}</p>
 		</div>`;
-	})}
+			})
+			.join('')}
+		</div>
+
 		</div>`;
 	}
 }

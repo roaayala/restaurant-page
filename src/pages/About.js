@@ -24,14 +24,17 @@ export class About {
 	render() {
 		return `<div>
 		<img src='${this.content.image}' >
+
+		<div class='container'>
 		<h1>${this.content.headline}</h1>
 		<p>${this.content.body}</p>
-		
+
 		<div>
 		<h2>Address</h2>
 		<p>${this.content.address}</p>
 		</div>
 
+		<div>
 		<h2>Open Time</h2>
 		<ul>
 		<li>${this.content.openTime.weekday}</li>
@@ -39,12 +42,15 @@ export class About {
 		</ul>
 		</div>
 
+		<div>
 		<h2>Contacts</h2>
 		<ul>
 		<li>Phone: ${this.content.contacts.phone}</li>
 		<li>Emai: ${this.content.contacts.email}</li>
 		<li>Socials: ${this.content.contacts.socials}</li>
 		</ul>
+		</div>
+
 		</div>
 
 		</div>`;
