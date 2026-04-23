@@ -27,8 +27,9 @@ export class About {
 
 		<div class='container'>
 		<h1>${this.content.headline}</h1>
-		<p>${this.content.body}</p>
+		<p class='about-description'>${this.content.body}</p>
 
+		<div class='about-info'>
 		<div>
 		<h2>Address</h2>
 		<p>${this.content.address}</p>
@@ -46,10 +47,11 @@ export class About {
 		<h2>Contacts</h2>
 		<ul>
 		<li>Phone: ${this.content.contacts.phone}</li>
-		<li>Emai: ${this.content.contacts.email}</li>
+		<li>Email: ${this.content.contacts.email}</li>
 		<li>Socials: ${this.content.contacts.socials}</li>
 		</ul>
 		</div>
+</div>
 
 		</div>
 

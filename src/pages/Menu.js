@@ -42,7 +42,7 @@ export class Menu {
 		<h1>${this.content.headline}</h1>
 		${this.content.menus
 			.map((menu) => {
-				return `<div>
+				return `<div class='menu'>
 		<h2>${menu.name} (Rp. ${menu.price})</h2>
 		<p>${menu.description}</p>
 		</div>`;
