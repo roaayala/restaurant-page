@@ -46,6 +46,13 @@ img {
 	margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 36rem) {
+	img {
+		max-height: 50vh;
+		object-fit: cover;
+	}
+}
+
 .menu {
 	margin-bottom: 1rem;
 }
