@@ -1,3 +1,29 @@
 .container {
 	padding: 0 1rem;
 }
+
+@media screen and (min-width: 36rem) {
+	.container {
+		padding: 0;
+		max-width: 33.75rem;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 48rem) {
+	.container {
+		max-width: 45rem;
+	}
+}
+
+@media screen and (min-width: 64rem) {
+	.container {
+		max-width: 60rem;
+	}
+}
+
+@media screen and (min-width: 80rem) {
+	.container {
+		max-width: 75rem;
+	}
+}
